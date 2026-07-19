@@ -1,0 +1,330 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="JALOLIDDIN PORTFOLIO — Creative Developer, Frontend Developer, and UI/UX Designer. Premium portfolio showcasing modern web projects, services, and contact." />
+    <meta name="keywords" content="Jaloliddin, Portfolio, Frontend Developer, UI UX Designer, Web Developer, Creative Developer" />
+    <meta name="author" content="Jaloliddin" />
+    <meta name="theme-color" content="#ff6b00" />
+    <meta property="og:title" content="JALOLIDDIN PORTFOLIO" />
+    <meta property="og:description" content="Creative Developer • Frontend Developer • UI/UX Designer" />
+    <meta property="og:type" content="website" />
+    <title>JALOLIDDIN PORTFOLIO</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- ===== Loading Screen ===== -->
+    <div id="loader" class="loader">
+      <div class="loader__ring"></div>
+      <div class="loader__text">JALOLIDDIN<span>.</span></div>
+      <div class="loader__bar"><span></span></div>
+    </div>
+
+    <!-- ===== Custom Cursor ===== -->
+    <div class="cursor" id="cursor"></div>
+    <div class="cursor-dot" id="cursorDot"></div>
+
+    <!-- ===== Mouse Glow ===== -->
+    <div class="mouse-glow" id="mouseGlow"></div>
+
+    <!-- ===== Scroll Progress Bar ===== -->
+    <div class="scroll-progress" id="scrollProgress"></div>
+
+    <!-- ===== Particle Background ===== -->
+    <canvas id="particles" class="particles"></canvas>
+
+    <!-- ===== Navigation ===== -->
+    <header class="nav" id="nav">
+      <div class="nav__inner">
+        <a href="#home" class="nav__logo">
+          <span class="nav__logo-mark">J</span>
+          <span class="nav__logo-text">JALOLIDDIN</span>
+        </a>
+        <nav class="nav__menu" id="navMenu">
+          <a href="#home" class="nav__link active">Home</a>
+          <a href="#about" class="nav__link">About</a>
+          <a href="#skills" class="nav__link">Skills</a>
+          <a href="#portfolio" class="nav__link">Portfolio</a>
+          <a href="#projects" class="nav__link">Projects</a>
+          <a href="#services" class="nav__link">Services</a>
+          <a href="#contact" class="nav__link">Contact</a>
+          <a href="login.html" class="nav__link nav__link--cta">Login</a>
+        </nav>
+        <button class="nav__toggle" id="navToggle" aria-label="Toggle menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </header>
+
+    <!-- ===== Hero ===== -->
+    <section class="hero" id="home">
+      <div class="hero__shapes">
+        <span class="shape shape--1"></span>
+        <span class="shape shape--2"></span>
+        <span class="shape shape--3"></span>
+        <span class="shape shape--4"></span>
+      </div>
+      <div class="hero__inner">
+        <p class="hero__eyebrow reveal">Welcome to my portfolio</p>
+        <h1 class="hero__title reveal">
+          JALOLIDDIN<br /><span class="hero__title-grad">PORTFOLIO</span>
+        </h1>
+        <p class="hero__typing reveal">
+          <span id="typed"></span><span class="cursor-bar">|</span>
+        </p>
+        <p class="hero__desc reveal">
+          Crafting premium digital experiences with elegant design, smooth motion,
+          and pixel-perfect code. Let's build something extraordinary together.
+        </p>
+        <div class="hero__actions reveal">
+          <a href="#portfolio" class="btn btn--primary ripple">View Portfolio</a>
+          <a href="#contact" class="btn btn--ghost ripple">Get in Touch</a>
+        </div>
+        <div class="hero__socials reveal">
+          <a href="#" aria-label="GitHub" class="social">GH</a>
+          <a href="#" aria-label="LinkedIn" class="social">in</a>
+          <a href="#" aria-label="Dribbble" class="social">Dr</a>
+          <a href="#" aria-label="Twitter" class="social">X</a>
+        </div>
+      </div>
+      <a href="#about" class="hero__scroll" aria-label="Scroll down">
+        <span class="hero__scroll-mouse"></span>
+      </a>
+    </section>
+
+    <!-- ===== About ===== -->
+    <section class="section" id="about">
+      <div class="section__head reveal">
+        <span class="section__tag">01</span>
+        <h2 class="section__title">About <span>Me</span></h2>
+        <p class="section__sub">A short story about who I am and what I do.</p>
+      </div>
+      <div class="about">
+        <div class="about__card glass reveal">
+          <div class="about__avatar">
+            <div class="about__avatar-img">
+              <span>JD</span>
+            </div>
+            <div class="about__avatar-glow"></div>
+          </div>
+          <div class="about__content">
+            <h3>Hi, I'm Jaloliddin</h3>
+            <p>
+              I'm a creative developer and UI/UX designer focused on building
+              premium, modern, and highly interactive web experiences. I blend
+              elegant visual design with clean, performant code to ship products
+              that feel effortless and refined.
+            </p>
+            <ul class="about__list">
+              <li><span>2+</span> Years Experience</li>
+              <li><span>80+</span> Projects Delivered</li>
+              <li><span>40+</span> Happy Clients</li>
+              <li><span>15+</span> Design Awards</li>
+            </ul>
+            <a href="#contact" class="btn btn--primary ripple">Hire Me</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Skills ===== -->
+    <section class="section" id="skills">
+      <div class="section__head reveal">
+        <span class="section__tag">02</span>
+        <h2 class="section__title">My <span>Skills</span></h2>
+        <p class="section__sub">Technologies and tools I use to bring ideas to life.</p>
+      </div>
+      <div class="skills">
+        <div class="skills__col glass reveal">
+          <h3>Frontend</h3>
+          <div class="skill"><div class="skill__head"><span>HTML / CSS</span><span>65%</span></div><div class="skill__bar"><span data-w="65"></span></div></div>
+          <div class="skill"><div class="skill__head"><span>JavaScript</span><span>70%</span></div><div class="skill__bar"><span data-w="70"></span></div></div>
+          <div class="skill"><div class="skill__head"><span>React</span><span>67%</span></div><div class="skill__bar"><span data-w="67"></span></div></div>
+          <div class="skill"><div class="skill__head"><span>Vue</span><span>40%</span></div><div class="skill__bar"><span data-w="40"></span></div></div>
+        </div>
+        <div class="skills__col glass reveal">
+          <h3>Design</h3>
+          <div class="skill"><div class="skill__head"><span>Figma</span><span>62%</span></div><div class="skill__bar"><span data-w="62"></span></div></div>
+          <div class="skill"><div class="skill__head"><span>UI/UX</span><span>90%</span></div><div class="skill__bar"><span data-w="90"></span></div></div>
+          <div class="skill"><div class="skill__head"><span>Illustrator</span><span>88%</span></div><div class="skill__bar"><span data-w="88"></span></div></div>
+          <div class="skill"><div class="skill__head"><span>Photoshop</span><span>97%</span></div><div class="skill__bar"><span data-w="97"></span></div></div>
+        </div>
+        <div class="skills__col glass reveal">
+          <h3>Backend & Tools</h3>
+          <div class="skill"><div class="skill__head"><span>Node.js</span><span>65%</span></div><div class="skill__bar"><span data-w="65"></span></div></div>
+          <div class="skill"><div class="skill__head"><span>Supabase</span><span>47%</span></div><div class="skill__bar"><span data-w="47"></span></div></div>
+          <div class="skill"><div class="skill__head"><span>Git</span><span>68%</span></div><div class="skill__bar"><span data-w="68"></span></div></div>
+          <div class="skill"><div class="skill__head"><span>Tilda / Webpack</span><span>84%</span></div><div class="skill__bar"><span data-w="84"></span></div></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Portfolio ===== -->
+    <section class="section" id="portfolio">
+      <div class="section__head reveal">
+        <span class="section__tag">03</span>
+        <h2 class="section__title">My <span>Portfolio</span></h2>
+        <p class="section__sub">A curated selection of premium work. Replace placeholders with your own images.</p>
+      </div>
+      <div class="portfolio" id="portfolioGrid">
+        <!-- Cards injected by JS for easy replacement -->
+      </div>
+    </section>
+
+    <!-- ===== Projects ===== -->
+    <section class="section" id="projects">
+      <div class="section__head reveal">
+        <span class="section__tag">04</span>
+        <h2 class="section__title">Featured <span>Projects</span></h2>
+        <p class="section__sub">Filter and explore selected projects by category.</p>
+      </div>
+      <div class="projects__filters reveal" id="projectFilters">
+        <button class="chip active" data-filter="all">All</button>
+        <button class="chip" data-filter="web">Web</button>
+        <button class="chip" data-filter="mobile">Mobile</button>
+        <button class="chip" data-filter="design">Design</button>
+        <button class="chip" data-filter="branding">Branding</button>
+      </div>
+      <div class="projects" id="projectsGrid">
+        <!-- Cards injected by JS -->
+      </div>
+    </section>
+
+    <!-- ===== Services ===== -->
+    <section class="section" id="services">
+      <div class="section__head reveal">
+        <span class="section__tag">05</span>
+        <h2 class="section__title">My <span>Services</span></h2>
+        <p class="section__sub">What I can do for you.</p>
+      </div>
+      <div class="services">
+        <article class="service glass reveal">
+          <div class="service__icon">01</div>
+          <h3>Web Development</h3>
+          <p>Modern, fast, and scalable websites built with clean code and best practices.</p>
+          <a href="#contact" class="service__link">Learn more →</a>
+        </article>
+        <article class="service glass reveal">
+          <div class="service__icon">02</div>
+          <h3>UI/UX Design</h3>
+          <p>Human-centered interfaces with elegant visuals and seamless interactions.</p>
+          <a href="#contact" class="service__link">Learn more →</a>
+        </article>
+        <article class="service glass reveal">
+          <div class="service__icon">03</div>
+          <h3>Brand Identity</h3>
+          <p>Distinctive visual identities that make your brand memorable and premium.</p>
+          <a href="#contact" class="service__link">Learn more →</a>
+        </article>
+        <article class="service glass reveal">
+          <div class="service__icon">04</div>
+          <h3>Motion Design</h3>
+          <p>Smooth animations and micro-interactions that bring products to life.</p>
+          <a href="#contact" class="service__link">Learn more →</a>
+        </article>
+        <article class="service glass reveal">
+          <div class="service__icon">05</div>
+          <h3>SEO Optimization</h3>
+          <p>Technical SEO and performance tuning for top search visibility.</p>
+          <a href="#contact" class="service__link">Learn more →</a>
+        </article>
+        <article class="service glass reveal">
+          <div class="service__icon">06</div>
+          <h3>Consulting</h3>
+          <p>Strategic guidance on product, design systems, and frontend architecture.</p>
+          <a href="#contact" class="service__link">Learn more →</a>
+        </article>
+      </div>
+    </section>
+
+    <!-- ===== Contact ===== -->
+    <section class="section" id="contact">
+      <div class="section__head reveal">
+        <span class="section__tag">06</span>
+        <h2 class="section__title">Get In <span>Touch</span></h2>
+        <p class="section__sub">Have a project in mind? Let's talk.</p>
+      </div>
+      <div class="contact">
+        <form class="contact__form glass reveal"   id="contactForm" action="https://formsubmit.co/m.akhmadjonuzb@gmail.com" method="POST" >
+          <div class="field">
+            <input type="text" id="name" required />
+            <label for="name">Your Name</label>
+            <span class="field__line"></span>
+          </div>
+          <div class="field">
+            <input type="email" id="email" required />
+            <label for="email">Your Email</label>
+            <span class="field__line"></span>
+          </div>
+          <div class="field">
+            <input type="text" id="subject" required />
+            <label for="subject">Subject</label>
+            <span class="field__line"></span>
+          </div>
+          <div class="field">
+            <textarea id="message" rows="5" required></textarea>
+            <label for="message">Your Message</label>
+            <span class="field__line"></span>
+          </div>
+          <button type="submit" class="btn btn--primary ripple">Send Message</button>
+          <p class="contact__status" id="contactStatus"></p>
+        </form>
+        <div class="contact__side reveal">
+          <div class="contact__map glass">
+            <div class="contact__map-pin">📍 Tashkent, Uzbekistan</div>
+            <div class="contact__map-grid"></div>
+          </div>
+          <div class="contact__info glass">
+            <p><strong>Email</strong> hello@jaloliddin.dev</p>
+            <p><strong>Phone</strong> +998 90 123 45 67</p>
+            <p><strong>Location</strong> Tashkent, Uzbekistan</p>
+            <div class="contact__socials">
+              <a href="#" class="social">GH</a>
+              <a href="#" class="social">in</a>
+              <a href="#" class="social">Dr</a>
+              <a href="#" class="social">X</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Footer ===== -->
+    <footer class="footer">
+      <div class="footer__inner">
+        <a href="#home" class="nav__logo">
+          <span class="nav__logo-mark">J</span>
+          <span class="nav__logo-text">JALOLIDDIN</span>
+        </a>
+        <nav class="footer__nav">
+          <a href="#about">About</a>
+          <a href="#skills">Skills</a>
+          <a href="#portfolio">Portfolio</a>
+          <a href="#projects">Projects</a>
+          <a href="#services">Services</a>
+          <a href="#contact">Contact</a>
+        </nav>
+        <div class="footer__socials">
+          <a href="#" class="social" aria-label="GitHub">GH</a>
+          <a href="#" class="social" aria-label="LinkedIn">in</a>
+          <a href="#" class="social" aria-label="Dribbble">Dr</a>
+          <a href="#" class="social" aria-label="Twitter">X</a>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <p>© <span id="year"></span> Jaloliddin. All rights reserved.</p>
+        <p>Designed & built with passion.</p>
+      </div>
+    </footer>
+
+    <!-- ===== Scroll to Top ===== -->
+    <button class="to-top" id="toTop" aria-label="Scroll to top">↑</button>
+
+    <script src="script.js"></script>
+  </body>
+</html>

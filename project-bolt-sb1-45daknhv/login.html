@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Login — JALOLIDDIN PORTFOLIO" />
+    <title>Login • JALOLIDDIN PORTFOLIO</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body class="login-page">
+    <canvas id="particles" class="particles"></canvas>
+    <div class="cursor" id="cursor"></div>
+    <div class="cursor-dot" id="cursorDot"></div>
+    <div class="mouse-glow" id="mouseGlow"></div>
+
+    <div class="login__back">
+      <a href="index.html" class="btn btn--ghost btn--sm ripple">← Back to Home</a>
+    </div>
+
+    <div class="login">
+      <form class="login__card glass" id="loginForm">
+        <div class="login__glow"></div>
+        <h1 class="login__title">Welcome Back</h1>
+        <p class="login__sub">Sign in to your account</p>
+
+        <div class="field">
+          <input type="email" id="loginEmail" required />
+          <label for="loginEmail">Email Address</label>
+          <span class="field__line"></span>
+        </div>
+        <div class="field field--password">
+          <input type="password" id="loginPassword" required />
+          <label for="loginPassword">Password</label>
+          <span class="field__line"></span>
+          <button type="button" class="field__toggle" id="togglePass" aria-label="Show password">👁</button>
+        </div>
+
+        <div class="login__row">
+          <label class="check">
+            <input type="checkbox" id="remember" />
+            <span class="check__box"></span>
+            <span>Remember me</span>
+          </label>
+          <a href="#" class="login__forgot">Forgot Password?</a>
+        </div>
+
+        <button type="submit" class="btn btn--primary btn--block ripple">Sign In</button>
+        <p class="login__status" id="loginStatus"></p>
+
+        <p class="login__alt">Don't have an account? <a href="#">Sign up</a></p>
+      </form>
+    </div>
+
+    <script src="script.js"></script>
+    <script>
+      // Login page specific logic
+      (function () {
+        const form = document.getElementById('loginForm');
+        const status = document.getElementById('loginStatus');
+        const toggle = document.getElementById('togglePass');
+        const pass = document.getElementById('loginPassword');
+
+        toggle.addEventListener('click', () => {
+          const isPw = pass.type === 'password';
+          pass.type = isPw ? 'text' : 'password';
+          toggle.textContent = isPw ? '🙈' : '👁';
+        });
+
+        form.addEventListener('submit', (e) => {
+          e.preventDefault();
+          status.textContent = 'Signing in...';
+          status.style.color = 'var(--orange)';
+          setTimeout(() => {
+            status.textContent = 'Welcome back! Redirecting...';
+            setTimeout(() => { window.location.href = 'index.html'; }, 900);
+          }, 800);
+        });
+      })();
+    </script>
+  </body>
+</html>
